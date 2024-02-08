@@ -45,7 +45,7 @@ const GameFinished = () => {
   let count = 1
 
   return (
-    <div className="w-full h-full rounded-xl rounded-md mx-8 shadow-xl flex flex-col justify-center items-center gap-4">
+    <div className="md:text-3xl w-full h-full rounded-xl rounded-md mx-8 shadow-xl flex flex-col justify-center items-center gap-4">
       <header className="shadow-xl text-3xl md:text-5xl w-full bg-purple-500 p-4 rounded-xl flex items-center flex-col justify-center">
         <p className="text-lg font-semibold text-white">The winner is...</p>
         <h1 className="text-white font-bold">{winningPlayer.username}</h1>
@@ -53,7 +53,7 @@ const GameFinished = () => {
           with a total of <strong>{winningPlayer.score} POINTS!</strong>
         </p>
       </header>
-      <h2 className="text-3xl text-center font-bold">Scoreboard</h2>
+      <h2 className="text-3xl md:text-4xl text-center font-bold">Scoreboard</h2>
       <main className="w-full max-w-[75%] max-h-64">
         <ul className=" max-h-48 overflow-auto text-center overflow-auto border-2 border-solid border-grey-300 shadow-xl p-4 rounded-xl">
           {state.players.sort(compareFn).map(player => (

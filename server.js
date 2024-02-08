@@ -234,5 +234,7 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`server running at localhost:${CLIENT_PORT}`);
+    console.log(
+        `Server: localhost:${PORT}\nClient: http://localhost:${CLIENT_PORT}`
+    );
 });

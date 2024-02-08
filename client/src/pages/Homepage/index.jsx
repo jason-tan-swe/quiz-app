@@ -8,8 +8,8 @@ const Homepage = ({ setIsConnected }) => {
   const [isOnForm, setIsOnForm] = useState(false)
 
   return (
-    <div className="flex flex-col justify-center max-w-80">
-      <h1 className="text-white text-xl text-center p-2 shadow-md rounded-t-md bg-purple-500 font-bold">
+    <div className="flex flex-col justify-center md:text-3xl">
+      <h1 className="text-white text-xl text-center p-2 shadow-md rounded-t-md bg-purple-500 font-bold md:text-5xl md:p-8">
         Quiz App
       </h1>
       {isOnForm && (

@@ -10,7 +10,7 @@ const NavigationButtons = ({ setIsOnForm, setIsCreateForm }) => {
   }
 
   const buttonStyles =
-    'text-white hover:cursor-pointer hover:bg-purple-400 bg-purple-500 mt-2 font-semibold rounded-md p-2'
+    'text-white hover:cursor-pointer hover:bg-purple-400 bg-purple-500 mt-2 font-semibold rounded-2xl p-2 md:p-8'
 
   return (
     <form className="flex flex-col p-12 rounded-md shadow-xl gap-2">

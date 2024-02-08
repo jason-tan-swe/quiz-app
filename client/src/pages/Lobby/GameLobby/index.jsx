@@ -59,10 +59,11 @@ const GameLobby = () => {
 
   return (
     <>
-      <aside className="absolute top-0 right-0 mx-2">
-        {state.timer} <p className="text-xs">Your score: {state.score}</p>
+      <aside className="md:text-xl absolute top-0 right-0 mx-2">
+        {state.timer}{' '}
+        <p className="text-xs md:text-xl">Your score: {state.score}</p>
       </aside>
-      <main className="border-2 border-solid border-grey-300 max-w-[80%] rounded-xl shadow-xl p-4 mx-12 flex flex-col justify-center items-center gap-2">
+      <main className="md:text-2xl border-2 border-solid border-grey-300 max-w-[80%] rounded-xl shadow-xl p-4 mx-12 flex flex-col justify-center items-center gap-2">
         <h1 className="">{HTMLDecoderEncoder.decode(state.question)}</h1>
         <div className="flex flex-col w-full gap-2">
           {choices?.map(choice => (
