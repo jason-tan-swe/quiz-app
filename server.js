@@ -11,12 +11,27 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.setHeader(
+        "Content-Security-Policy",
+        "connect-src 'self' https://quiz-app-production-4616.up.railway.app/"
+    );
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Credentials", true);
+    next();
+});
+
+app.get("*", (req, res) => res.json({ isWorking: true }));
+
 let rooms = [];
 
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: `http://localhost:${CLIENT_PORT}`,
+        origin: `*`,
+        methods: ["GET", "POST", "PUT", "DELETE"],
     },
 });
 

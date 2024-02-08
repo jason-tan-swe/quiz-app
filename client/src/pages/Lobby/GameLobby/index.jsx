@@ -53,8 +53,8 @@ const GameLobby = () => {
   }
 
   useEffect(() => {
-    // setChoices(shuffle(state.choices))
-    setChoices(state.choices)
+    setChoices(shuffle(state.choices))
+    // setChoices(state.choices)
   }, [state.choices])
 
   return (
@@ -76,7 +76,7 @@ const GameLobby = () => {
               <p className="ml-2 w-full flex justify-between">
                 {HTMLDecoderEncoder.decode(choice)}
                 {playerChoice == choice && (
-                  <span className="mr-2">Your answer</span>
+                  <span className="mr-2 md:mr-4">Your answer</span>
                 )}
               </p>
             </button>

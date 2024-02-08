@@ -29,8 +29,9 @@ const CreateForm = ({ setIsConnected }) => {
     <form
       onSubmit={handleSubmit}
       className="flex flex-col p-4 b-2 rounded-md shadow-xl gap-2"
+      autoComplete="off"
     >
-      <label for="usernameField">Name</label>
+      <label htmlFor="usernameField">Name</label>
       <input
         id="usernameField"
         className={inputGroupStyles}

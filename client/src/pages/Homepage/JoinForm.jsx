@@ -35,10 +35,11 @@ const JoinForm = ({ setIsConnected }) => {
 
   return (
     <form
+      autoComplete="off"
       onSubmit={handleSubmit}
       className="flex flex-col p-4 b-2 rounded-md shadow-xl gap-2"
     >
-      <label for="usernameField">Name</label>
+      <label htmlFor="usernameField">Name</label>
       <input
         id="usernameField"
         className={inputGroupStyles}
@@ -48,7 +49,7 @@ const JoinForm = ({ setIsConnected }) => {
         onChange={handleUsername}
         required={true}
       />
-      <label for="roomNameField">Room Name</label>
+      <label htmlFor="roomNameField">Room Name</label>
       <input
         id="roomNameField"
         className={inputGroupStyles}
